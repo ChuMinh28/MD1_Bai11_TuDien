@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<script>
+    let english = ['walk', 'talk', 'read']
+    let vn = ['di bo', 'noi', 'doc']
+    function findWord() {
+        let word = window.prompt('Enter a Word: ')
+        for (let i = 0; i < english.length; i++) {
+            if (english[i] === word) return i
+        }
+        return -1
+    }
+    function translate() {
+        let i = findWord()
+        if (i === -1) {
+            alert('404 NOT FOUND')
+        } else {
+            alert('Tu tieng viet tuong ung la: ' + vn[i])
+        }
+    }
+    translate()
+</script>
+</body>
+</html>
